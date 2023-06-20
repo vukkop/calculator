@@ -43,7 +43,10 @@ function calculate() {
     default:
     break;
   }
-  res.toString.length
+  if (res.toString().length > 10) {
+    res = res.toString().substring(0, 13) + "..."
+
+  }
   displayDiv.innerText = res
 }
 
